@@ -1,6 +1,6 @@
 import java.util.Scanner; //import Statement
 
-public class Lab_03_Ex1
+public class Lab_03_Ex1_Revised
 {
 	public static void main(String[]arg)
 	{
