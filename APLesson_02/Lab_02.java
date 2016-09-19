@@ -2,7 +2,9 @@ public class Lab_02
 {
 	public static void main(String[]args)
 	{
-		System.out.println("2 multiplied by 4 is " + 2*4);
+		int x = 10;
+		int y = 99;
+		System.out.println("x multiplied by y is " + x*y);
 		
 		String first = "Jared Doan";
 		System.out.println(first);
