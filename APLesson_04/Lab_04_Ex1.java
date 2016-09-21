@@ -40,6 +40,12 @@ public class Lab_04_Ex1
 		form.format("Tax:", (price1 + price2 + price3)*0.08);
 		
 		form.format("Total:", (price1 + price2 + price3)*1.08);
+		
+		System.out.println();
+		
+		System.out.println("______________________________________");
+		
+		System.out.println("*Thanks for your support*");
 	}
 	
 	public void format(String item, double price)
