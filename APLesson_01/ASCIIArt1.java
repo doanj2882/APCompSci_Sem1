@@ -1,4 +1,4 @@
-public class firstProg
+public class ASCIIArt1
 {
 	public static void main(String[]args)
 		{

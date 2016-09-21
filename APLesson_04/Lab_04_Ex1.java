@@ -26,21 +26,25 @@ public class Lab_04_Ex1
 		System.out.println("Enter item 3 price.");
 		double price3 = keyboard.nextDouble();
 		
-		System.out.println("::::::::::::::::Receipt:::::::::::::::");
+		System.out.println(":::::::::::::::Receipt:::::::::::::::");
 		Lab_04_Ex1 form = new Lab_04_Ex1();
 		
 		form.format(item1, price1);
 		form.format(item2, price2);
 		form.format(item3, price3);
 		
+		System.out.println();
+		
 		form.format("Subtotal:", price1 + price2 + price3);
 		
 		form.format("Tax:", (price1 + price2 + price3)*0.08);
+		
+		form.format("Total:", (price1 + price2 + price3)*1.08);
 	}
 	
 	public void format(String item, double price)
 	{
-		System.out.printf("\n%15s  %10.2f", item, price);
+		System.out.printf("\n%15s ....... %10.2f", item, price);
 	}
 	
 }
