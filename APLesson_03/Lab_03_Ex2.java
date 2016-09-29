@@ -19,7 +19,7 @@ public class Lab_03_Ex2
 		//search fo rthe next integer that the user enters
 		double num2 = keyboard.nextDouble();
 		
-		double BMI = num2/num1;
+		double BMI = 703*(num2/(num1*num1));
 		System.out.println("Your BMI is " + BMI);
 	}
 }
