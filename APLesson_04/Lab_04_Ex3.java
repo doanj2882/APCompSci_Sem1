@@ -21,7 +21,7 @@ public class Lab_04_Ex3
 		System.out.printf("Your monthly payment will be $ %5.2f\n", interest.payment(rate, principle, number, time));
 	}
 	
-	public double payment(double r, double p, double n, double t)
+	public static double payment(double r, double p, double n, double t)
 	{
 		return (p*Math.pow((1+ r/n), (n*t)))/12;
 	}
