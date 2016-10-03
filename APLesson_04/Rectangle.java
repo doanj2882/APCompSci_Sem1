@@ -1,14 +1,14 @@
 import java.util.Scanner;
-public class Lab_04_2_Ex2
+public class Rectangle
 {
-	static double num1;
-	static double num2;
-	static double num3;
-	static double avg;
+	static double l;
+	static double w;
+	static double perimeter;
+	
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner (System.in);
-		Lab_04_2_Ex2 calculation = new Lab_04_2_Ex2();
+		Rectangle calculation = new Rectangle();
 		System.out.println("Please enter the length:");
 		l = kb.nextDouble();
 		System.out.println("Please enter the width:");
@@ -18,12 +18,12 @@ public class Lab_04_2_Ex2
 		print();
 	}
 	
-		public static void average()
+		public static void calcPerim()
 		{
-			avg = (num1 + num2 +num3)/3;
+			perimeter = (2*(l + w));
 		}
 		public static void print()
 		{
-			System.out.println("The perimeter of your rectangle is: " + perimeter);
+			System.out.printf("The perimeter of your rectangle is: %.5f", perimeter);
 		}
 }
