@@ -58,5 +58,5 @@ public class APLab_05_Ex2
 		}
 		return total;
 	}
-	
+	//have yet to create method format
 }
