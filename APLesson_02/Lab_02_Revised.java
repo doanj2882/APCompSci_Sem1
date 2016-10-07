@@ -10,9 +10,9 @@ public class Lab_02_Revised
 		System.out.println(first);
 		String second = "1234 NotAFake Road";
 		System.out.println(second);
-		String third = "San Diego";
+		String third = "San Diego, CA 92130";
 		System.out.println(third);
-		String fourth = "92130";
+		String fourth = "United States of America";
 		System.out.println(fourth);
 		
 		int l = 3;
