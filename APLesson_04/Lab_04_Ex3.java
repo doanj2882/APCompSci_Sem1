@@ -23,6 +23,6 @@ public class Lab_04_Ex3
 	
 	public static double payment(double r, double p, double n, double t)
 	{
-		return (p*Math.pow((1+ r/n), (n*t)))/12;
+		return (p*Math.pow(1+ (r/n), (n*t))/(12*t));
 	}
 }
