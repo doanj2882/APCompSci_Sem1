@@ -15,10 +15,22 @@ public class APLab_08_Ex4
 	{
 		if (start <= stop)
 		{
-			System.out.println(word.substring(0, start));
+			System.out.println(makeCenter(word.substring(0, start)));
 			start += 1;
 			tree(word, start, stop);
 			//continue print formatting
+			
+		}
+	}
+	public static String makeCenter(String word)
+	{
+		if (word.length() >= 20)
+		{
+			return word;
+		}
+		else
+		{
+			return makeCenter(" " + word);
 		}
 	}
 }
