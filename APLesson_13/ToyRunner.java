@@ -1,11 +1,11 @@
 public class ToyRunner
 {
-	public void main(String[]args)
+	public static void main(String[]args)
 	{
-		Toy object = new Toy(AFigure, 7);
-		object.toString();
-	
-		Toy object = new Toy(Car, 5);
-		object.toString();
+		AFigure bob = new AFigure("Bob the Spy");
+		Car racer = new Car("Lightning Mcqueen");
+		
+		System.out.println(bob);
+		System.out.println(racer);
 	}
 }

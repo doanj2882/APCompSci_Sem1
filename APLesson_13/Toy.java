@@ -3,7 +3,7 @@ public abstract class Toy
 	private String name;
 	private int count;
 	
-	public Toy
+	public Toy()
 	{
 		this.name = "";
 		this.count = 1;
@@ -29,16 +29,16 @@ public abstract class Toy
 	
 	public String getName()
 	{
-		return name;
+		return this.name;
 	}
 	
 	public int getCount()
 	{
-		return count;
+		return this.count;
 	}
 	
 	public String toString()
 	{
-		return " " + count;
+		return this.name + " " + this.count;
 	}
 }

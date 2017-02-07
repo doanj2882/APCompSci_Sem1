@@ -1,25 +1,15 @@
 public class AFigure extends Toy
 {
-	private String AFigure;
-	
 	public AFigure()
 	{
 		super();
-		this.Afigure = "";
 	}
-	
-	public AFigure(String n, int c)
+	public AFigure(String nm)
 	{
-		super(c);
-		this.Afigure = n;
+		super(nm);
 	}
-	
 	public String getType()
 	{
-		return AFigure;
-	}
-	public String toString()
-	{
-		return AFigure + super.toString;
+		return "Action Figure";
 	}
 }

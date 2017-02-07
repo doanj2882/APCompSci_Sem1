@@ -1,25 +1,15 @@
 public class Car extends Toy
 {
-	private String Car;
-	
 	public Car()
 	{
 		super();
-		this.Car = "";
 	}
-	
-	public Car(String n, int c)
+	public Car(String nm)
 	{
-		super(c);
-		this.Car = n;
+		super(nm);
 	}
-	
 	public String getType()
 	{
-		return Car;
-	}
-	public String toString()
-	{
-		return Car + super.toString;
+		return "Car";
 	}
 }
