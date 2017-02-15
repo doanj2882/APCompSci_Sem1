@@ -9,7 +9,7 @@ public class StudentAdvanceTicket extends AdvanceTicket
 	{
 		super(d);
 	}
-	public int getPrice()
+	public double getPrice()
 	{
 		return (super.getPrice()/2);
 	}

@@ -12,15 +12,15 @@ public class AdvanceTicket extends Ticket
 		super();
 		daysLeft = d;
 	}
-	public int getPrice()
+	public double getPrice()
 	{
 		if (daysLeft >= 10)
 		{
-			return 30;
+			return 30.00;
 		}
 		else
 		{
-			return 40;
+			return 40.00;
 		}
 	}
 }

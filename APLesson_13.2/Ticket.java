@@ -11,7 +11,7 @@ public abstract class Ticket
 	{
 		return (int)(Math.random()*10000000)+1;
 	}
-	public abstract int getPrice();
+	public abstract double getPrice();
 
 	public String toString()
 	{
