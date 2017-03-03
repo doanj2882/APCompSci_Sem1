@@ -2,20 +2,19 @@ import java.util.Arrays;
 
 public class Toyota implements Location
 {
-	private double[] location;
+	double[] location;
 
 	public Toyota()
 	{
-		double[] location = new double[2];
+		location = new double[2];
 	}
 
-	public Toyota(String loc)
+	public Toyota(String l)
 	{
-		double[] location = new double[2];
-		String[] coordinates = new String[2];
-		double x = String.parseString(coordinates.substring(coordinates.indexOf(", ")));
-		double y = String.parseString(coordinates.substring(coordinates.indexOf(", ")+2));
-		String[] coordinates = {x, y};
+		location = new double[2];
+		String[] locs =  l.split(", ");
+		location[0] = Double.parseDouble(locs[0]);
+		location[1] = Double.parseDouble(locs[1]);
 	}	
 	
 	public int getID()
@@ -25,8 +24,8 @@ public class Toyota implements Location
 
 	public void move(double a, double b)
 	{
-		x += a;
-		y += b;
+		location[0] += a;
+		location[1] += b;
 	}
 
 	public double[] getLoc()
