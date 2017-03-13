@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class GMC implements Location
+public class GMC extends TheCar
 {
 	private double x, y;
 
@@ -16,20 +16,4 @@ public class GMC implements Location
 		y = Y;
 	}	
 	
-	public int getID()
-	{
-		return (int)(Math.random()*10000000)+1;
-	}
-
-	public void move(double a, double b)
-	{
-		this.x += a;
-		this.y += b;
-	}
-
-	public double[] getLoc()
-	{
-		double[] Loc = {x, y};
-		return Loc;
-	}
 }

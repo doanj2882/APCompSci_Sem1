@@ -9,30 +9,42 @@ public class Satellite
        locate.add(new Toyota("8, 9"));
        locate.add(new GMC(3, 8));
 
-
        double[] home = {0, 0};
-
+	   
+	   TheCar car = (TheCar)l;
 
        String printout = "\n\n" +
                "==========================" + "\nStarting locations...";
 
+		for (Location l : locate)
+		{
+		   printout += "\nLocation for " + l.getID() + ": (" + getLocation(car.getLoc()) + ")";
+		}
+		
 
-       for (Location l : locate)
-       {
-           printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
+		printout += "\n\n" + "=========================="
+					+"\nDistance from home... ";
+		
+		for (Location l : locate)
+		{
+		   printout += "\nDistance for " + l.getID() + ": (" + getDistance(((TheCar)l).getLoc(), home)+ ")";
+		}
+		
+		
+		
+		for (Location l : locate)
+		{
+		   double one =(Math.random()*100)+1;
+		   double two =(Math.random()*100)+1;
+		   car.move(one, two);
+		   printout += "\nAfter " + l.getID() + " Moved : (" + one + ", " + two + ")" 
+						+ "\nNew Location: (" + getLocation(car.getLoc()) +")";
+
+		   printout += "\n\n" + "==========================" +
+					   "\nDistance from home... "
+					   +"\nDistance for " + l.getID() + ": (" + getDistance(car.getLoc(), home)+ ")";
+
        }
-
-
-       printout += "\n\n" + "==========================" +
-                   "\nDistance from home...";
-
-
-       for (Location l : locate)
-       {
-           printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
-       }
-
-
        System.out.println(printout);
    }
 
