@@ -1,17 +1,15 @@
 public class TheCar implements Location
 {
-	private double[] location;
-	private int ID;
+	public double[] location;
+	private final int ID = (int)(Math.random()*10000000)+1;
 	
 	public TheCar()
 	{
 		location = new double[2];
-		ID = 0;
 	}
 	
 	public int getID()
 	{
-		ID = (int)(Math.random()*10000000)+1;
 		return ID;
 	}
 	

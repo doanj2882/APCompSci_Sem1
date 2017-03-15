@@ -2,7 +2,6 @@ import java.util.Arrays;
 
 public class Toyota extends TheCar
 {
-	double[] location;
 
 	public Toyota(String l)
 	{
