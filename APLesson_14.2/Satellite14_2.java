@@ -1,23 +1,24 @@
 import java.util.ArrayList;
-public class Satellite
+public class Satellite14_2
 {
    public static void main(String[]args)
    {
-       ArrayList<Location> locate = new ArrayList<>();
+       ArrayList<Location14_2> locate = new ArrayList<>();
        double[] honLoc = {5, 6};
-       locate.add(new Honda(honLoc));
-       locate.add(new Toyota("8, 9"));
-       locate.add(new GMC(3, 8));
+       locate.add(new Honda14_2(honLoc));
+       locate.add(new Toyota14_2("8, 9"));
+       locate.add(new GMC14_2(3, 8));
 
        double[] home = {0, 0};
 	   
 
        String printout = "\n\n" +
                "==========================";
-		for (Location l : locate)
+		for (Location14_2 l : locate)
 		{
 		   double one =(Math.random()*100)+1;
 		   double two =(Math.random()*100)+1;
+		   
 		   l.move(one, two);
 		   printout += "\n\n";
 		   printout += "\nAfter " + l.getID() + " Moved : (" + String.format("%.2f, %.2f", one, two) + ")" 
