@@ -44,6 +44,17 @@ public class Magpie2
 		 * Create addtional code (another else if) that
 		 * responds "He sounds like a pretty dank teacher"
 		 * if you mention "Robinette" in your statement */
+		else if (statement.indexOf("cat") >= 0
+			|| statement.indexOf("dog") >= 0
+			|| statement.indexOf("fish") >= 0
+			|| statement.indexOf("turtle") >= 0)
+		{
+			response = "Tell me more about your pet";
+		}
+		else if (statement.indexOf("Robinette") >= 0)
+		{
+			response = "He sounds like a pretty dank teacher";
+		}
 
 		else
 		{
@@ -57,6 +68,17 @@ public class Magpie2
 	private int findKeyword(String statement, String goal, int startPos)
 	{
 		String phrase = statement.trim().toLowerCase();
+		g = goal.toLowerCase();
+		int psn = phrase.IndexOf(g, startPos);\
+		while psn >= 0
+		{
+			String before = " ";
+			String after = " ";
+			if > 0
+			{
+				before = 
+			}
+		}
 		/* New String variable phrase = a more searchable version of statement.
 		 	-Use a combination of trim() and toLowerCase() modify statement.
 
