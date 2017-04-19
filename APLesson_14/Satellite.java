@@ -16,9 +16,12 @@ public class Satellite
                "==========================";
 		for (Location l : locate)
 		{
+			TheCar C = new TheCar();
 		   double one =(Math.random()*100)+1;
 		   double two =(Math.random()*100)+1;
-		   l.move(one, two);
+		   
+		   ((TheCar)l).move(one, two);
+		   
 		   printout += "\n\n";
 		   printout += "\nAfter " + l.getID() + " Moved : (" + String.format("%.2f, %.2f", one, two) + ")" 
 						+ "\nNew Location: (" + (getLocation(l.getLoc())) +")";
