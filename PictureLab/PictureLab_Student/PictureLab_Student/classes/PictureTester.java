@@ -31,6 +31,13 @@ public class PictureTester
 		canvas.explore();
   }
   
+  public static void testmyCollage()
+  {
+		Picture myCollage = new Picture("640x480.jpg");
+		myCollage.createMyCollage();
+		myCollage.explore();
+  }
+  
     public static void testCopy()
   {
     Picture canvas = new Picture("640x480.jpg");
@@ -110,13 +117,6 @@ public class PictureTester
 		caterpillar.explore();
   }
   
-  public static void testmyCollage()
-  {
-		Picture myCollage = new Picture("mycollage.jpg");
-		myCollage.explore();
-		myCollage.mirrorDiagonal();
-		myCollage.explore();
-  }
   public static void main(String[] args)
   {
     // uncomment a call here to run a test

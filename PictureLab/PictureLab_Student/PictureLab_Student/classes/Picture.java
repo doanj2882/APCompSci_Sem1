@@ -156,8 +156,8 @@ public class Picture extends SimplePicture
     Pixel[][] toPixels = this.getPixels2D();
     Pixel[][] fromPixels = fromPic.getPixels2D();
     for (int fromRow = 0, toRow = startRow; 
-         fromRow < fromPixels.length &&
-         toRow < toPixels.length; 
+			fromRow < fromPixels.length && 
+			toRow < toPixels.length; 
          fromRow++, toRow++)
     {
       for (int fromCol = 0, toCol = startCol; 
@@ -178,9 +178,9 @@ public class Picture extends SimplePicture
     Pixel toPixel = null;
     Pixel[][] toPixels = this.getPixels2D();
     Pixel[][] fromPixels = fromPic.getPixels2D();
-    for (int fromRow = 0, toRow = startRow; fromRow < fromPixels.length &&toRow < endRow; fromRow++, toRow++)
+    for (int fromRow = startRow, toRow = endRow; fromRow < endRow - startRow && toRow < endRow; fromRow++, toRow++)
     {
-      for (int fromCol = 0, toCol = startCol; fromCol < fromPixels[0].length && toCol < endCol;  fromCol++, toCol++)
+      for (int fromCol = startCol, toCol = endCol; fromCol < endCol-startCol && toCol < endCol;  fromCol++, toCol++)
       {
         fromPixel = fromPixels[fromRow][fromCol];
         toPixel = toPixels[toRow][toCol];
@@ -203,6 +203,22 @@ public class Picture extends SimplePicture
     this.copy(flower2,500,0);
     this.mirrorVertical();
     this.write("collage.jpg");
+  }
+  
+   public void createMyCollage()
+  {
+    Picture flower1 = new Picture("robot.jpg");
+    Picture flower2 = new Picture("seagull.jpg");
+    this.copy2(flower1, 30, 50, 30, 50);
+    this.copy(flower2,100,0);
+    this.copy2(flower1, 30, 50, 30, 50);
+    Picture flowerNoBlue = new Picture(flower2);
+    flowerNoBlue.zeroBlue();
+    this.copy(flowerNoBlue,300,0);
+    this.copy2(flower1, 30, 50, 30, 50);
+    this.copy(flower2,500,0);
+    this.mirrorVertical();
+    this.write("mycollage.jpg");
   }
   
   public void edgeDetection(int edgeDist)
@@ -299,7 +315,7 @@ public class Picture extends SimplePicture
     }
   }
   
-   public void mirrorGull()
+  public void mirrorGull()
   {
     int mirrorPoint = 345;
     Pixel rightPixel = null;
@@ -316,13 +332,7 @@ public class Picture extends SimplePicture
       }
     }
   }
-  
-    public void myCollage()
-  {
-      Picture flower1 = new Picture("flower1.jpg");
-      this.copy2(flower1,10,20, 0, 100);
-      this.write("mycollage.jpg");
-  }
+ 
   
   public static void main(String[] args) 
   {
