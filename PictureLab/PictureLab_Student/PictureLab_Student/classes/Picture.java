@@ -205,21 +205,37 @@ public class Picture extends SimplePicture
     this.write("collage.jpg");
   }
   
-   public void createMyCollage()
+  public void createMyCollage()
   {
-    Picture flower1 = new Picture("robot.jpg");
+    Picture flower1 = new Picture("beach.jpg");
     Picture flower2 = new Picture("seagull.jpg");
-    this.copy2(flower1, 30, 50, 30, 50);
+    this.copy(flower1,0,0);
     this.copy(flower2,100,0);
-    this.copy2(flower1, 30, 50, 30, 50);
+    this.copy(flower1,200,0);
     Picture flowerNoBlue = new Picture(flower2);
     flowerNoBlue.zeroBlue();
     this.copy(flowerNoBlue,300,0);
-    this.copy2(flower1, 30, 50, 30, 50);
+    this.copy(flower1,400,0);
     this.copy(flower2,500,0);
     this.mirrorVertical();
-    this.write("mycollage.jpg");
+    this.write("collage.jpg");
   }
+  
+   // public void createMyCollage()
+  // {
+    // Picture flower1 = new Picture("robot.jpg");
+    // Picture flower2 = new Picture("seagull.jpg");
+    // this.copy2(flower1, 30, 50, 30, 50);
+    // this.copy(flower2,100,0);
+    // this.copy2(flower1, 30, 50, 30, 50);
+    // Picture flowerNoBlue = new Picture(flower2);
+    // flowerNoBlue.zeroBlue();
+    // this.copy(flowerNoBlue,300,0);
+    // this.copy2(flower1, 30, 50, 30, 50);
+    // this.copy(flower2,500,0);
+    // this.mirrorVertical();
+    // this.write("mycollage.jpg");
+  // }
   
   public void edgeDetection(int edgeDist)
   {

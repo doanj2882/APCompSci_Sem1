@@ -40,9 +40,9 @@ public class PictureTester
   
     public static void testCopy()
   {
-    Picture canvas = new Picture("640x480.jpg");
-    canvas.createCollage();
-    canvas.explore();
+    Picture copy = new Picture("640x480.jpg");
+    copy.createCollage();
+    copy.explore();
   }
   
   public static void testMirrorArms()
