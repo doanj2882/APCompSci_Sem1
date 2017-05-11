@@ -1,12 +1,5 @@
-/**
- * This is a class that tests the Deck class.
- */
 public class DeckTester {
 
-    /**
-     * The main method in this class checks the Deck operations for consistency.
-     *  @param args is not used.
-     */
     public static void main(String[] args) 
     {
         //String[] rank1 = {"5", "King", "Ace"}; THIS IS ACTIVITY 2
@@ -40,11 +33,11 @@ public class DeckTester {
             {
                 r = "Queen";
             }
-            else if  (i / 13 == 13 ) 
+			else if  (i / 13 == 13 ) 
             {
                 r = "King";
             }
-            else if ( i / 13 == 14 ) 
+			else if ( i / 13 == 14 ) 
             {
                 r = "Ace";
             }
@@ -52,17 +45,18 @@ public class DeckTester {
             {
                 r = Integer.toString((i + 1) % 13);
             }
-            if (i < 13) 
-            {
-                s = "Hearts";
-            }
-            else if (i < 26) 
+            
+            if (i < 26) 
             {
                 s = "Diamonds";
             }
             else if (i < 39) 
             { 
                 s = "Clubs";
+            }
+			else if (i < 13) 
+            {
+                s = "Hearts";
             }
             else 
             {
@@ -74,7 +68,7 @@ public class DeckTester {
             pointValues[i] = ((i+1) % 13);
         }
         
-        Deck e = new Deck(ranks, suits, pointValues);
-        System.out.println(e);
+        Deck cool = new Deck(ranks, suits, pointValues);
+        System.out.println(cool);
     }
 }
