@@ -25,19 +25,19 @@ public class DeckTester {
         {
             String r = "";
             String s = "";
-            if  (i / 11 == 13 )
+            if  (i % 11 == 13 )
             {
                 r = "Jack";
             }
-            else if (i / 12 == 13 ) 
+            else if (i % 12 == 13 ) 
             {
                 r = "Queen";
             }
-			else if  (i / 13 == 13 ) 
+			else if  (i % 13 == 13 ) 
             {
                 r = "King";
             }
-			else if ( i / 13 == 14 ) 
+			else if ( i % 13 == 14 ) 
             {
                 r = "Ace";
             }
