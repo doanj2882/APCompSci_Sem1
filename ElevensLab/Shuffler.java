@@ -33,38 +33,32 @@ public class Shuffler {
 
     public static void perfectShuffle(int[] values) 
     {
-        int[] split1 = new int[VALUE_COUNT/2];
-        int[] split2 = new int[VALUE_COUNT-VALUE_COUNT/2];
-
-        for(int i=0; i<VALUE_COUNT/2; i++) 
-        {
-            split1[i] = values[i];
-        }
-        
-        for(int i=0; i<VALUE_COUNT-VALUE_COUNT/2; i++) 
-        {
-            split2[i] = values[ i + VALUE_COUNT / 2 ];
-        }
-
-        for(int i=0; i<VALUE_COUNT/2; i++) 
-        {
-            values[2*i] = split2[i];
-            values[2*i+1] = split1[i];
-        }
-
-        if(VALUE_COUNT%2!= 0) 
-        {
-            values[VALUE_COUNT - 1] = split2[VALUE_COUNT- (VALUE_COUNT/2)];
-        }
+        int[] shuffled = new int[values.length];
+		int mid = values.length/2;
+		int i = 0;
+		int j = 0;
+		//takes first half and puts in shuffled even
+		for (; i < mid; i++)//for loop from 0 to mid iterate by 1
+			values[i] = shuffled[j];//put values @ i in shuffled @ j
+			//iterate j by 2
+		//reset j = 1
+		
+		//takes second half and puts in shuffled odd
+		for(; i < values.length; i++)//for loop i from mid to length
+			//put values @ i in shuffled @ j
+			//iterate j by 2
+		
+		//for loop
+			//put values from shuffled into values
+	}
 }
 
     public static void selectionShuffle(int[] values) 
     {
         for( int i = VALUE_COUNT - 1; i >= 0; i-- ) 
         {
-            int j = (int)(Math.random() * i);
-            
-            int comp = values[j];
+            int j = (int)(Math.random() * i); //just pick a random index
+            int comp = values[j]; //swap integer (just a placeholder)
             values[j] = values[i];
             values[i] = comp;
         }

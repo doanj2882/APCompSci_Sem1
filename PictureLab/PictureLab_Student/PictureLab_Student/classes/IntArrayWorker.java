@@ -115,17 +115,14 @@ public class IntArrayWorker
     return count;
   }
   
-  public int getLargest()
+    public int getLargest()
   {
-    int larg = Integer.MIN_VALUE;
-    for (int[] row : matrix)
+    int larg = 0;
+    for (int row = 0; row < matrix.length; row++)
     {
-      for (int i : row)
+      for (int col = 0; col < matrix[0].length; col++)
       {
-        if (i > larg)
-        {
-          larg = i;
-        }
+        if (matrix[row][col] > larg) larg = matrix[row][col];
       }
     }
     return larg;
@@ -136,7 +133,7 @@ public class IntArrayWorker
     int total = 0;
     for (int[] row : matrix)
     {
-		total += row[col];
+		total = total + row[col];
     }
     return total;
   }

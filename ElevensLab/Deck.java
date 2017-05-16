@@ -7,12 +7,12 @@ public class Deck {
 
     private int size;
 
-    public Deck(String[] ranks, String[] suits, int[] values) 
+    public Deck(String[] r, String[] s, int[] v) 
     {
-        this.cards = new ArrayList<Card>();
-        for (int i = 0; i < ranks.length; i++) 
+        cards = new ArrayList<Card>();
+        for (int i = 0; i < r.length; i++) 
         {
-            Card rand = new Card(ranks[i], suits[i], values[i]);
+            Card rand = new Card(r[i], s[i], v[i]);
             cards.add(rand);
         }
         size = cards.size();
@@ -39,9 +39,9 @@ public class Deck {
       {
             int j = (int)(Math.random() * i);
             
-            Card rand = cards.get(j);
+            Card cut = cards.get(j);
             cards.set(j, cards.get(i));
-            cards.set(i, rand);
+            cards.set(i, cut);
       }
     }
 

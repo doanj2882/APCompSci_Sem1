@@ -6,11 +6,11 @@ public class Card {
 
     private int pointValue;
 
-    public Card(String cardRank, String cardSuit, int cardPointValue) 
+    public Card(String r, String s, int pv) 
 	{
-        suit = cardSuit;
-        rank = cardRank;
-        pointValue = cardPointValue;
+        suit = s;
+        rank = r;
+        pointValue = pv;
     }
 
     public String suit()
@@ -28,16 +28,15 @@ public class Card {
         return pointValue;
     }
 
-    public boolean matches(Card otherCard) 
+    public boolean equality(Card pair) 
 	{
-        if (suit.equals(otherCard.suit) && rank.equals(otherCard.rank) && pointValue == otherCard.pointValue)
+        if (suit.equals(pair.suit) && rank.equals(pair.rank) && pointValue == pair.pointValue)
         {
            return true;
         }
         return false;
     }
 
-    @Override
     public String toString() 
     {
         return rank + " of " + suit + " (point value = " + pointValue + ")";

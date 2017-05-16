@@ -1,11 +1,13 @@
-public class CardTester {
-    public static void main(String[] args) {
-        Card card1 = new Card("Clubs", "2", 2);
-        Card card2 = new Card("Clubs", "2", 2);
-        Card card3 = new Card("Diamonds", "King", 13);
-        System.out.println(card3.toString());
-        System.out.println("card1 & card2: " + card2.matches(card1));
-        System.out.println("card2 & card3: " + card2.matches(card3));
+public class CardTester 
+{
+    public static void main(String[] args) 
+	{
+        Card c1 = new Card("Clubs", "2", 2);
+        Card c2 = new Card("Clubs", "2", 2);
+        Card c3 = new Card("Diamonds", "King", 13);
+        System.out.println(c3.toString());
+        System.out.println("c1 & c2: " + c2.matches(c1));
+        System.out.println("c2 & c3: " + c2.matches(c3));
 	}
 	
 }
