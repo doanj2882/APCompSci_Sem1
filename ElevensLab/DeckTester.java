@@ -23,6 +23,6 @@ public class DeckTester {
         String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
 		Deck d = new Deck(ranks, suits, points);
 		System.out.println(d);
-		//for()//left off here
+		//for()//<- LEFT OFF HERE
     }
 }
