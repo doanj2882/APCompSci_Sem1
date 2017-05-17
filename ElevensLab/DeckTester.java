@@ -18,57 +18,11 @@ public class DeckTester {
         //Deck d3 = new Deck(rank3, suit3, value3);
         //System.out.println("D3 deal: " + d3.deal());
         
-        String[] ranks = new String[52];
-        String[] suits = new String[52];
-        int[] pointValues = new int[52];
-        for (int i = 0; i < 52; i++) 
-        {
-            String r = "";
-            String s = "";
-            if  (i % 11 == 13 )
-            {
-                r = "Jack";
-            }
-            else if (i % 12 == 13 ) 
-            {
-                r = "Queen";
-            }
-			else if  (i % 13 == 13 ) 
-            {
-                r = "King";
-            }
-			else if ( i % 13 == 14 ) 
-            {
-                r = "Ace";
-            }
-            else 
-            {
-                r = Integer.toString((i + 1) % 13);
-            }
-            
-            if (i < 26) 
-            {
-                s = "Diamonds";
-            }
-            else if (i < 39) 
-            { 
-                s = "Clubs";
-            }
-			else if (i < 13) 
-            {
-                s = "Hearts";
-            }
-            else 
-            {
-                s = "Spades";
-            }
-            
-            ranks[i] = r;
-            suits[i] = s;
-            pointValues[i] = ((i+1) % 13);
-        }
-        
-        Deck cool = new Deck(ranks, suits, pointValues);
-        System.out.println(cool);
+        String[] ranks = {"Ace", "Two", "};
+		int[] points = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+        String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
+		Deck d = new Deck(ranks, suits, points);
+		System.out.println(d);
+		for()
     }
 }

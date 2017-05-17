@@ -38,20 +38,24 @@ public class Shuffler {
 		int i = 0;
 		int j = 0;
 		//takes first half and puts in shuffled even
-		for (; i < mid; i++)//for loop from 0 to mid iterate by 1
+		for (; i < mid; i++)
+		{//for loop from 0 to mid iterate by 1
 			values[i] = shuffled[j];//put values @ i in shuffled @ j
-			//iterate j by 2
-		//reset j = 1
-		
+			j += 2;
+		}//iterate j by 2
+		j = 1; //reset j = 1
 		//takes second half and puts in shuffled odd
 		for(; i < values.length; i++)//for loop i from mid to length
-			//put values @ i in shuffled @ j
-			//iterate j by 2
-		
-		//for loop
-			//put values from shuffled into values
+		{	//put values @ i in shuffled @ j
+			values[i] = shuffled[j];
+			j += 2;//iterate j by 2
+		}
+		for(int m = 0; m < shuffled.length; m++)//for loop
+		{
+			values[m]=shuffled[m];
+		}//put values from shuffled into values
 	}
-}
+
 
     public static void selectionShuffle(int[] values) 
     {
