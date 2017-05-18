@@ -7,14 +7,17 @@ public class Deck {
 
     private int size;
 
-    public Deck(String[] r, String[] s, int[] v) 
+    public Deck(String[] ranks, String[] suits, int[] values) 
     {
         cards = new ArrayList<Card>();
-        for (int i = 0; i < r.length; i++) 
-        {
-            Card rand = new Card(r[i], s[i], v[i]);
-            cards.add(rand);
-        }
+		for(String suit : suits)
+		{
+			for(int i = 0; i < ranks.length; i++)
+			{
+				cards.add(new Card(ranks[i], suit, values[i]));
+			}
+			
+		}
         size = cards.size();
         shuffle();
     }

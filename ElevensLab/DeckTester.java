@@ -18,11 +18,10 @@ public class DeckTester {
         //Deck d3 = new Deck(rank3, suit3, value3);
         //System.out.println("D3 deal: " + d3.deal());
         
-        String[] ranks = {"Ace", "Two", "};
-		int[] points = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+        String[] ranks = {"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
         String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
+		int[] points = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 		Deck d = new Deck(ranks, suits, points);
 		System.out.println(d);
-		for()
     }
 }
