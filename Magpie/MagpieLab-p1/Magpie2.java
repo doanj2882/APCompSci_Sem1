@@ -9,16 +9,16 @@ public class Magpie2
 	{
 		String response = "";
 		
-		if (statement.indexOf("no") >= 0)
+		if (statement.indexOf("no") - 1 >= 0)
 		{
 			response = "Why so negative?";
 		}
-		else if (statement.equals(""))
+		else if (statement.length() == 0)
 		{
 			response = "Say something fam";
 		}
 		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
+				|| statement.indexOf("Father") >= 0
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0)
 		{
@@ -49,16 +49,15 @@ public class Magpie2
 			}
 			else
 			{
-				response = getRandomResponse();
-			}
-			int p = findKeyword(statement, "I", 0);
-			if (p >= 0 && findKeyword(statement, "you", p) >= 0)
-			{
-				response = transformIYouStatement(statement);
-			}
-			else
-			{
-				response = getRandomResponse();
+				psn = findKeyword(statement, "I", 0);
+				if (psn >= 0 && findKeyword(statement, "you", psn) >= 0)
+				{
+					response = transformIYouStatement(statement);
+				}
+				else
+				{
+					response = getRandomResponse();
+				}
 			}
 		}
 		return response;
@@ -88,7 +87,7 @@ public class Magpie2
 		int psnOfYou = findKeyword(statement, "you");
 		int psnOfMe = findKeyword(statement, "me", psnOfYou+3);
 		String restOfStatement = statement.substring(psnOfYou+3, psnOfMe);
-		return ("What makes you think that I" + restOfStatement + "you?");
+		return "What makes you think that I" + restOfStatement + "you?";
 	}
 	private String transformIYouStatement (String s)
 	{
@@ -101,7 +100,7 @@ public class Magpie2
 		int psnOfI = findKeyword(statement, "I");
 		int psnOfYou = findKeyword(statement, "you", psnOfI+1);
 		String restOfStatement = statement.substring(psnOfI+1, psnOfYou);
-		return ("Why do you" + restOfStatement + "me?");
+		return "Why do you" + restOfStatement + "me?";
 	}
 	private int findKeyword(String statement, String goal, int startPos)
 	{
